@@ -1,0 +1,3 @@
+*.pck
+**/__pycache__/
+/dump
