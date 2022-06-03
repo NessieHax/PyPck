@@ -14,7 +14,8 @@ def main():
 
     if not os.path.exists(args.pck_file): raise FileNotFoundError("file does not exist")
     with open(args.pck_file, "rb") as pck:
-        pck_file = PCKFile(InputStream(pck.read()))
+        pck_file = PCKFile()
+        pck_file.parse(InputStream(pck.read()))
     
     if args.list:
         print(pck_file)
